@@ -18,6 +18,8 @@ const connect = function () {
     console.log(message);
   });
 
+  conn.write('Name: JFM')
+
   return conn;
 };
 
