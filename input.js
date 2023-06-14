@@ -1,3 +1,5 @@
+// Stores the active TCP connection object.
+let connection;
 
 const setupInput = function() {
   const stdin = process.stdin;
