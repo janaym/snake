@@ -1,3 +1,4 @@
+
 const setupInput = function() {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -8,9 +9,22 @@ const setupInput = function() {
 }
 
 const handleUserInput = function(key) {
- if(key === '\u0003') {
-  process.exit();
- }
+  if(key === '\u0003') {
+    process.exit();
+  }  
+
+  const wasdMap = {
+    w: "Move: up",
+    a: "Move: left",
+    s: "Move: down",
+    d: "Move: right"
+  };
+
+  if(wasdMap[key]) {
+    console.log(wasdMap[key]);
+
+  }
+
 }
 
 module.exports = setupInput;
