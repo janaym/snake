@@ -18,7 +18,9 @@ const connect = function () {
     console.log(message);
   });
 
-  conn.write('Name: JFM')
+  conn.write('Name: JFM');
+  
+  //conn.write("Move: up");
 
   return conn;
 };
