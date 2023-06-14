@@ -8,7 +8,7 @@ const setupInput = function(conn) {
 
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
-  
+
   stdin.resume();
   stdin.on('data', handleUserInput);
 
@@ -16,10 +16,12 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
+  //exits process upon ctrl-c key
   if (key === '\u0003') {
     process.exit();
   }
 
+  //assign movement to wasd keys
   const wasdMap = {
     w: "Move: up",
     a: "Move: left",
@@ -29,7 +31,17 @@ const handleUserInput = function(key) {
 
   if (wasdMap[key]) {
     connection.write(wasdMap[key]);
+  }
 
+  //special keystroke messages
+  const keystrokeMessages = {
+    g: "Say: good game!",
+    f: "Say: Paying my respects",
+    r: "Say: ripperoni"
+  };
+
+  if (keystrokeMessages[key]) {
+    connection.write(keystrokeMessages[key]);
   }
 };
 
