@@ -1,7 +1,8 @@
 // Stores the active TCP connection object.
 let connection;
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -23,7 +24,7 @@ const handleUserInput = function(key) {
   };
 
   if(wasdMap[key]) {
-    console.log(wasdMap[key]);
+    connection.write(wasdMap[key]);
 
   }
 
