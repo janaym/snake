@@ -6,8 +6,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](snek.png)
-
+!["screenshot description of snake game"](./photos/snek.png)
 
 
 ## Getting Started
@@ -21,6 +20,7 @@ Before you can run this client, you will need to be running the server side whic
 - Eat the red dots onscreen to grow in length
 - Avoid crashing into yourself, other player's snakes, and the wall - if you do, it's game over!
 - The game will also end if you idle for seven seconds
+- Play with your friends - get them to connect to the server from their own machines with this repo
 
 ## Communication
 
