@@ -1,6 +1,6 @@
 // Stores the active TCP connection object.
 let connection;
-const { wasdMap, keystrokeMessages} = require('./constants');
+const { wasdMap, keystrokeMessages } = require('./constants');
 
 //sets up the user's keyboard interface
 const setupInput = function(conn) {
